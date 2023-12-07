@@ -1,0 +1,32 @@
+POST http://localhost:5500/api/item
+Content-Type: application/json
+
+{
+  "title": "Your Title",
+  "description": "Your Description",
+  "status": "pending",
+  "creationDate": "2023-12-13T12:34:56.789Z"
+}
+
+
+###
+
+GET http://localhost:5500/api/items
+Content-Type: application/json
+
+
+###
+
+DELETE http://localhost:5500/api/item/65706b669689e530fe6528c5
+Content-Type: application/json
+
+
+###
+
+PUT http://localhost:5500/api/item/65706b649689e530fe6528c3
+Content-Type: application/json
+
+{
+    "item":"this is the fourth todo"
+}
+
