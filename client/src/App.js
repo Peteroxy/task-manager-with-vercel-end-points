@@ -30,7 +30,7 @@ function App() {
     }
   
     try {
-      const res = await axios.post('http://localhost:5500/api/item', {
+      const res = await axios.post('https://task-manager-with-vercel-end-points-api.vercel.app/api/item', {
         title,
         description,
         status,
@@ -51,7 +51,7 @@ function App() {
   useEffect(() => {
     const getItemsList = async () => {
       try {
-        const res = await axios.get('http://localhost:5500/api/items');
+        const res = await axios.get('https://task-manager-with-vercel-end-points-api.vercel.app/api/items');
         setListItems(res.data);
       } catch (err) {
         console.log(err);
@@ -63,7 +63,7 @@ function App() {
   // Delete item when clicking on delete
   const deleteItem = async (id) => {
     try {
-      await axios.delete(`http://localhost:5500/api/item/${id}`);
+      await axios.delete(`https://task-manager-with-vercel-end-points-api.vercel.app/api/item/${id}`);
       const newListItems = listItems.filter((item) => item._id !== id);
       setListItems(newListItems);
     } catch (err) {
@@ -86,7 +86,7 @@ function App() {
     };
   
     try {
-      await axios.put(`http://localhost:5500/api/item/${isUpdating}`, updatedItem);
+      await axios.put(`https://task-manager-with-vercel-end-points-api.vercel.app/api/item/${isUpdating}`, updatedItem);
       const updatedListItems = listItems.map((item) =>
         item._id === isUpdating ? { ...item, ...updatedItem } : item
       );
