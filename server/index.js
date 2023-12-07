@@ -9,7 +9,7 @@ const app = express();
 app.use(express.json());
 
 // Port
-const PORT = process.env.PORT || 5000;
+const PORT = 5500;
 
 // using cors
 app.use(cors({
@@ -33,7 +33,7 @@ app.use(cors({
 const TodoItemRoute = require('./routes/listItems');
 
 // CONNECT TO MONGODB
-mongoose.connect(process.env.DB_CONNECT, {
+mongoose.connect("mongodb+srv://adunmoyepeter111:%40Mongodbtodo@cluster0.xnnahng.mongodb.net/to-do-list?retryWrites=true&w=majority", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
