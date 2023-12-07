@@ -12,17 +12,13 @@ app.use(express.json());
 const PORT = process.env.PORT || 5000;
 
 // using cors
-// app.use(cors({
-//   origin: "https://task-manager-with-vercel-end-points-frontend.vercel.app",
-//   methods: ["POST", "PUT", "GET", "DELETE"],
-//   credentials:true
-// }));
-
 app.use(cors({
-  origin: "*",
+  origin: "https://task-manager-with-vercel-end-points-frontend.vercel.app",
   methods: ["POST", "PUT", "GET", "DELETE"],
   credentials:true
 }));
+
+
 
 
 // Handle pre-flight requests
