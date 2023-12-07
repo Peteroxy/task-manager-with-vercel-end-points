@@ -16,6 +16,8 @@ function App() {
   const [updateStatus, setUpdateStatus] = useState('');
   const [updateCreationDate, setUpdateCreationDate] = useState('');
 
+  axios.defaults.withCredentials = true;
+
   function getCurrentDate() {
     const currentDate = new Date();
     return currentDate.toISOString().split('T')[0];
