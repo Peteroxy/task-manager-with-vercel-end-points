@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 5000;
 
 // using cors
 app.use(cors({
-  origin: [],
+  origin: ["https://task-manager-with-vercel-end-points-frontend.vercel.app"],
   methods: ["POST", "PUT", "GET", "DELETE"],
   credentials:true
 }));
