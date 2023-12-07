@@ -20,7 +20,7 @@ const PORT = process.env.PORT || 5000;
 
 // Handle pre-flight requests
 app.options('*', cors({
-  origin: 'https://task-manager-with-vercel-end-points-frontend.vercel.app',
+  origin: ['https://task-manager-with-vercel-end-points-frontend.vercel.app'],
   methods: ["POST", "PUT", "GET", "DELETE"],
   credentials: true
 }));
