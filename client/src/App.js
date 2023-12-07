@@ -42,10 +42,10 @@ function App() {
       setTitle('');
       setDescription('');
       setStatus('pending'); // Reset status to 'pending' after adding item
+      alert('item added to list')
     } catch (err) {
       console.log(err);
     }
-    alert('item added to list')
   };
 
 
@@ -68,10 +68,10 @@ function App() {
       await axios.delete(`https://task-manager-with-vercel-end-points-api.vercel.app/api/item/${id}`);
       const newListItems = listItems.filter((item) => item._id !== id);
       setListItems(newListItems);
+      alert('item deleted from list sucesssfully')
     } catch (err) {
       console.log(err);
     }
-    alert('item deleted from list sucesssfully')
   };
 
   // Update item
@@ -98,10 +98,10 @@ function App() {
       setUpdateDescription('');
       setUpdateStatus('');
       setUpdateCreationDate('');
+      alert('item updated sucessfully')
     } catch (err) {
       console.log(err);
     }
-    alert('item updated sucessfully')
   };
 
   // Before updating item, show an input field where we will create our updated item
