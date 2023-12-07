@@ -12,7 +12,11 @@ app.use(express.json());
 const PORT = process.env.PORT || 5000;
 
 // using cors
-app.use(cors());
+app.use(cors({
+  origin: [],
+  methods: ["POST", "PUT", "GET", "DELETE"],
+  credentials:true
+}));
 
 // importing routes
 const TodoItemRoute = require('./routes/listItems');
