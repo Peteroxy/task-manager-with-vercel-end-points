@@ -18,12 +18,19 @@ const PORT = process.env.PORT || 5000;
 //   credentials:true
 // }));
 
-// Handle pre-flight requests
-app.options('*', cors({
-  origin: ['https://task-manager-with-vercel-end-points-frontend.vercel.app'],
+app.use(cors({
+  origin: "*",
   methods: ["POST", "PUT", "GET", "DELETE"],
-  credentials: true
+  credentials:true
 }));
+
+
+// Handle pre-flight requests
+// app.options('*', cors({
+//   origin: ['https://task-manager-with-vercel-end-points-frontend.vercel.app'],
+//   methods: ["POST", "PUT", "GET", "DELETE"],
+//   credentials: true
+// }));
 
 
 // importing routes
